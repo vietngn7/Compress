@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF471E931DF5D60D00C81538 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF471E921DF5D60D00C81538 /* main.cpp */; };
+		BF471EA71DF5D64100C81538 /* ShannonF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF471E991DF5D64100C81538 /* ShannonF.cpp */; };
+		BF471EA81DF5D64100C81538 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF471E9B1DF5D64100C81538 /* main.cpp */; };
+		BF471EA91DF5D64100C81538 /* Huffman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF471E9D1DF5D64100C81538 /* Huffman.cpp */; };
+		BF471EAA1DF5D64100C81538 /* Compressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF471E9E1DF5D64100C81538 /* Compressor.cpp */; };
+		BF471EAB1DF5D64100C81538 /* Counting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF471E9F1DF5D64100C81538 /* Counting.cpp */; };
+		BF471EAC1DF5D64100C81538 /* Decompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF471EA11DF5D64100C81538 /* Decompressor.cpp */; };
+		BF471EAD1DF5D64100C81538 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BF471EA61DF5D64100C81538 /* Node.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +30,19 @@
 
 /* Begin PBXFileReference section */
 		BF471E8F1DF5D60D00C81538 /* Compress */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Compress; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF471E921DF5D60D00C81538 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BF471E991DF5D64100C81538 /* ShannonF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShannonF.cpp; sourceTree = "<group>"; };
+		BF471E9B1DF5D64100C81538 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BF471E9C1DF5D64100C81538 /* ShannonF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShannonF.h; sourceTree = "<group>"; };
+		BF471E9D1DF5D64100C81538 /* Huffman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Huffman.cpp; sourceTree = "<group>"; };
+		BF471E9E1DF5D64100C81538 /* Compressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Compressor.cpp; sourceTree = "<group>"; };
+		BF471E9F1DF5D64100C81538 /* Counting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Counting.cpp; sourceTree = "<group>"; };
+		BF471EA01DF5D64100C81538 /* Decompressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Decompressor.hpp; sourceTree = "<group>"; };
+		BF471EA11DF5D64100C81538 /* Decompressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Decompressor.cpp; sourceTree = "<group>"; };
+		BF471EA21DF5D64100C81538 /* Compressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Compressor.hpp; sourceTree = "<group>"; };
+		BF471EA31DF5D64100C81538 /* Huffman.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Huffman.hpp; sourceTree = "<group>"; };
+		BF471EA41DF5D64100C81538 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		BF471EA51DF5D64100C81538 /* Counting.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Counting.hpp; sourceTree = "<group>"; };
+		BF471EA61DF5D64100C81538 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +75,19 @@
 		BF471E911DF5D60D00C81538 /* Compress */ = {
 			isa = PBXGroup;
 			children = (
-				BF471E921DF5D60D00C81538 /* main.cpp */,
+				BF471E991DF5D64100C81538 /* ShannonF.cpp */,
+				BF471E9B1DF5D64100C81538 /* main.cpp */,
+				BF471E9C1DF5D64100C81538 /* ShannonF.h */,
+				BF471E9D1DF5D64100C81538 /* Huffman.cpp */,
+				BF471E9E1DF5D64100C81538 /* Compressor.cpp */,
+				BF471E9F1DF5D64100C81538 /* Counting.cpp */,
+				BF471EA01DF5D64100C81538 /* Decompressor.hpp */,
+				BF471EA11DF5D64100C81538 /* Decompressor.cpp */,
+				BF471EA21DF5D64100C81538 /* Compressor.hpp */,
+				BF471EA31DF5D64100C81538 /* Huffman.hpp */,
+				BF471EA41DF5D64100C81538 /* Node.hpp */,
+				BF471EA51DF5D64100C81538 /* Counting.hpp */,
+				BF471EA61DF5D64100C81538 /* Node.cpp */,
 			);
 			path = Compress;
 			sourceTree = "<group>";
@@ -120,7 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF471E931DF5D60D00C81538 /* main.cpp in Sources */,
+				BF471EAA1DF5D64100C81538 /* Compressor.cpp in Sources */,
+				BF471EAD1DF5D64100C81538 /* Node.cpp in Sources */,
+				BF471EAC1DF5D64100C81538 /* Decompressor.cpp in Sources */,
+				BF471EAB1DF5D64100C81538 /* Counting.cpp in Sources */,
+				BF471EA81DF5D64100C81538 /* main.cpp in Sources */,
+				BF471EA71DF5D64100C81538 /* ShannonF.cpp in Sources */,
+				BF471EA91DF5D64100C81538 /* Huffman.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +285,7 @@
 				BF471E981DF5D60D00C81538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
