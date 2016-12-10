@@ -96,7 +96,7 @@ void Compressor::CompressText()
     int buffer = 0;
     while (!input.eof())
     {
-        unsigned char ch = input.get();
+        unsigned wchar_t ch = input.get();
         
         vector<bool> bits = getBits(ch);
         
@@ -108,14 +108,28 @@ void Compressor::CompressText()
             if (count == 8)
             {
                 comp.put(buffer);
-              //  comp << buffer;
                 buffer = 0;
                 count = 0;
             }
         }
     }
-   // if(buffer != 0)
-     //   comp.put(buffer);
+    //Adding pseudo EOF
+    vector<bool> bits = getBits(-1);
+    for(int i = 0; i < bits.size(); ++i)
+    {
+        buffer = buffer | (bits[i]? 1: 0) << (7 - count);
+        count++;
+        
+        if (count == 8)
+        {
+            comp.put(buffer);
+            buffer = 0;
+            count = 0;
+        }
+    }
+    
+    if(buffer != 0)
+        comp.put(buffer);
     input.close();
     comp.close();
 }

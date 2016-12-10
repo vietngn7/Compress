@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     
     
-    string filename = "/Users/Shadow/Desktop/Test/2/2 3 mb .txt";
+    string filename = "/Users/Shadow/Desktop/Test/1/1 60 kb 1.txt";
     
     Counting* count = new Counting(filename);
     

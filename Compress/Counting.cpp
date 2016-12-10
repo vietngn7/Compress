@@ -61,23 +61,27 @@ Counting::Counting(string filename)
         }
     }
     
-    vector<Element> el = *new vector<Element>();
-    for(int i = 0; i < letters.size(); ++i)
-        el.push_back(*new Element{letters[i], frequency[i]});
-    sort(el.begin(), el.end(), compareByf);
+    letters.push_back(-1);
+    frequency.push_back(1);
+//    vector<Element> el = *new vector<Element>();
+//    for(int i = 0; i < letters.size(); ++i)
+//        el.push_back(*new Element{letters[i], frequency[i]});
+//    
+//    
+//    
+//    sort(el.begin(), el.end(), compareByf);
+//    
+//    letters.clear();
+//    frequency.clear();
+//
+//    for(int i = 0; i < el.size(); ++i)
+//    {
+//        letters.push_back(el[i].c);
+//        frequency.push_back(el[i].f);
+//    }
+//    
+//    el.clear();
     
-    letters.clear();
-    frequency.clear();
-
-    for(int i = 0; i < el.size(); ++i)
-    {
-        letters.push_back(el[i].c);
-        frequency.push_back(el[i].f);
-    }
-    
-    el.clear();
-    
-    return;
 }
 Counting::~Counting()
 {

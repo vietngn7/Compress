@@ -7,7 +7,7 @@
 //
 
 #include "Node.hpp"
-Node* createNode(char c, int weight)
+Node* createNode(wchar_t c, int weight)
 {
     Node* newNode = new Node;
     

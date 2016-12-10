@@ -15,7 +15,7 @@ using namespace std;
 
 struct Node
 {
-    char c;
+    wchar_t c;
     int weight;
     string code;
     Node* left;
@@ -37,6 +37,6 @@ public:
 };
 
 
-Node* createNode(char c, int weight);
+Node* createNode(wchar_t c, int weight);
 
 #endif /* Node_hpp */

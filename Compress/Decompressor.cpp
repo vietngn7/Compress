@@ -14,7 +14,7 @@ map<string, wchar_t> Decompressor::getMap(ifstream& file)
     file.read((char*)&mapSize,sizeof(mapSize));
     
     //Get characters in the table
-    vector<char> chars = *new vector<char>();
+    vector<wchar_t> chars = *new vector<wchar_t>();
     //Get their length
     vector<int> codeSizes = *new vector<int>();
 
@@ -72,11 +72,23 @@ map<string, wchar_t> Decompressor::getMap(ifstream& file)
 
 void Decompressor::getBody(ifstream& in, map<string, wchar_t> codes)
 {
+    setlocale(LC_ALL, "en_US.UTF-8");
+
     wofstream out(tofile);
+    
+    
+#ifdef PREFER_BOOST
+    boost::locale::generator gen;
+    std::locale loc = gen("en_US.UTF-8");
+#else
+    std::locale loc("en_US.UTF-8");
+#endif
+    out.imbue(loc);
+    wcout.imbue(loc);
     
     int count = 0;
     
-    unsigned char byte = in.get();
+    unsigned wchar_t byte = in.get();
     string code = "";
     while (!in.eof())
     {
@@ -87,6 +99,8 @@ void Decompressor::getBody(ifstream& in, map<string, wchar_t> codes)
         if(codes.find(code) != codes.end())
         {
             wchar_t c = codes[code];
+            if((int)c == -1)
+                break;
             out << c;
             code = "";
         }

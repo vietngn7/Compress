@@ -56,7 +56,7 @@ void Huffman::GenerateCodes(Node* node)
     
     if(node->left == nullptr && node->right == nullptr) //Node with character
     {
-        char c = node->c;
+        wchar_t c = node->c;
         string code = node->code;
         
         codes[findIndexChar(symbols, c)] = code;
@@ -90,12 +90,13 @@ void Huffman::BuldingTree()
   
     priority_queue<Node*, vector<Node*>, comparison>* query = new priority_queue<Node*, vector<Node*>, comparison>();
     
-    for(int i = 0; i < capacity; ++i)
+    for(int i = 0; i < capacity; ++i) //Sort query
     {
         query->push(temp->top());
         temp->pop();
     }
     delete  temp;
+    
     while(query->size() != 1) //Remove all nodes to create a root node
     {
 
