@@ -20,22 +20,7 @@ struct Node
     string code;
     Node* left;
     Node* right;
-    
-    bool operator()(Node first, Node second) const
-    {
-        return first.weight > second.weight;
-    }
-    
 };
-class CompareNode
-{
-public:
-    bool operator()(Node first, Node second) const
-    {
-        return first.weight > second.weight;
-    }
-};
-
 
 Node* createNode(wchar_t c, int weight);
 

@@ -53,13 +53,12 @@ vector<string> Huffman::getCodes()
 
 void Huffman::GenerateCodes(Node* node)
 {
-    
     if(node->left == nullptr && node->right == nullptr) //Node with character
     {
         wchar_t c = node->c;
         string code = node->code;
         
-        codes[findIndexChar(symbols, c)] = code;
+        codes[findIndexChar(symbols, c)] = code; //Add code to vector
         
         return;
     }
@@ -77,7 +76,6 @@ void Huffman::GenerateCodes(Node* node)
         node->right->code += '1';
         GenerateCodes(node->right);
     }
-    
 }
 void Huffman::BuldingTree()
 {

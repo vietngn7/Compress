@@ -17,6 +17,8 @@ Compressor::Compressor(string filename, string tofile, vector<wchar_t> symbols, 
     
     for(int i = 0; i < symbols.size(); ++ i)
         map.insert(pair<wchar_t, string>(symbols[i], codes[i]));
+    
+    reverse(map.begin(), map.end());
 }
 
 vector<bool> Compressor::getBits(wchar_t c)
@@ -62,27 +64,26 @@ void Compressor::CreateHeader(ofstream & comp)
             {
                 count = 0;
                 comp.put(buffer);
-                //comp << buffer;
                 buffer = 0;
             }
         }
     }
     if(buffer != 0)
         comp.put(buffer);
-
+   // comp.put(-1);
 }
 
 void Compressor::CompressText()
 {
     //Open sourse text file to get text
-    setlocale(LC_ALL, "en_US.UTF-8");
-    ifstream input (fileSourse);
+    setlocale(LC_ALL, "ru_RU.UTF-8");
+    wifstream input (fileSourse);
     
 #ifdef PREFER_BOOST
     boost::locale::generator gen;
-    std::locale loc = gen("en_US.UTF-8");
+    std::locale loc = gen("ru_RU.UTF-8");
 #else
-    std::locale loc("en_US.UTF-8");
+    std::locale loc("ru_RU.UTF-8");
 #endif
     input.imbue(loc);
     wcout.imbue(loc);
@@ -113,6 +114,7 @@ void Compressor::CompressText()
             }
         }
     }
+    
     //Adding pseudo EOF
     vector<bool> bits = getBits(-1);
     for(int i = 0; i < bits.size(); ++i)

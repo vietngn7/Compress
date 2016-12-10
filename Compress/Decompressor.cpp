@@ -72,16 +72,16 @@ map<string, wchar_t> Decompressor::getMap(ifstream& file)
 
 void Decompressor::getBody(ifstream& in, map<string, wchar_t> codes)
 {
-    setlocale(LC_ALL, "en_US.UTF-8");
+    setlocale(LC_ALL, "Russian");
 
     wofstream out(tofile);
     
     
 #ifdef PREFER_BOOST
     boost::locale::generator gen;
-    std::locale loc = gen("en_US.UTF-8");
+    std::locale loc = gen("ru_RU.UTF-8");
 #else
-    std::locale loc("en_US.UTF-8");
+    std::locale loc("ru_RU.UTF-8");
 #endif
     out.imbue(loc);
     wcout.imbue(loc);

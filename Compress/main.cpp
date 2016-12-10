@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     
     
-    string filename = "/Users/Shadow/Desktop/Test/1/1 60 kb 1.txt";
+    string filename = "/Users/Shadow/Desktop/happyhip.txt";
     
     Counting* count = new Counting(filename);
     
@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
     
     delete count;
 
-    Huffman* h = new Huffman(symbols, frequencies);
+    ShannonF* h = new ShannonF(symbols, frequencies);
     
     vector<string> code = h->getCodes();
     

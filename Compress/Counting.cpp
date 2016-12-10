@@ -15,21 +15,23 @@ struct Element
     wchar_t c;
     int f;
 };
+
 bool compareByf(const Element &a, const Element &b)
 {
-    return a.f < b.f;
+    return a.f > b.f;
 }
+
 
 Counting::Counting(string filename)
 {
-    setlocale(LC_ALL, "en_US.UTF-8");
+    setlocale(LC_ALL, "ru_RU.UTF-8");
     wifstream input (filename);
     
 #ifdef PREFER_BOOST
     boost::locale::generator gen;
-    std::locale loc = gen("en_US.UTF-8");
+    std::locale loc = gen("ru_RU.UTF-8");
 #else
-    std::locale loc("en_US.UTF-8");
+    std::locale loc("ru_RU.UTF-8");
 #endif
     input.imbue(loc);
     wcout.imbue(loc);
@@ -61,26 +63,28 @@ Counting::Counting(string filename)
         }
     }
     
-    letters.push_back(-1);
+    letters.push_back(-1); //Adding pseudo EOF
     frequency.push_back(1);
-//    vector<Element> el = *new vector<Element>();
-//    for(int i = 0; i < letters.size(); ++i)
-//        el.push_back(*new Element{letters[i], frequency[i]});
-//    
-//    
-//    
-//    sort(el.begin(), el.end(), compareByf);
-//    
-//    letters.clear();
-//    frequency.clear();
-//
-//    for(int i = 0; i < el.size(); ++i)
-//    {
-//        letters.push_back(el[i].c);
-//        frequency.push_back(el[i].f);
-//    }
-//    
-//    el.clear();
+    
+    vector<Element> el = *new vector<Element>();
+    
+    for(int i = 0; i < letters.size(); ++i)
+        el.push_back(*new Element{letters[i], frequency[i]});
+    
+    sort(el.begin(), el.end(), compareByf);
+    
+    letters.clear();
+    frequency.clear();
+    
+    for(int i = 0; i < el.size(); ++i)
+    {
+        letters.push_back(el[i].c);
+        frequency.push_back(el[i].f);
+    }
+    
+    el.clear();
+    
+    return;
     
 }
 Counting::~Counting()

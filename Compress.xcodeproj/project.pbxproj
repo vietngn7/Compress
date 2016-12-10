@@ -75,19 +75,19 @@
 		BF471E911DF5D60D00C81538 /* Compress */ = {
 			isa = PBXGroup;
 			children = (
-				BF471E991DF5D64100C81538 /* ShannonF.cpp */,
-				BF471E9B1DF5D64100C81538 /* main.cpp */,
-				BF471E9C1DF5D64100C81538 /* ShannonF.h */,
-				BF471E9D1DF5D64100C81538 /* Huffman.cpp */,
 				BF471E9E1DF5D64100C81538 /* Compressor.cpp */,
-				BF471E9F1DF5D64100C81538 /* Counting.cpp */,
-				BF471EA01DF5D64100C81538 /* Decompressor.hpp */,
-				BF471EA11DF5D64100C81538 /* Decompressor.cpp */,
 				BF471EA21DF5D64100C81538 /* Compressor.hpp */,
-				BF471EA31DF5D64100C81538 /* Huffman.hpp */,
-				BF471EA41DF5D64100C81538 /* Node.hpp */,
+				BF471E9F1DF5D64100C81538 /* Counting.cpp */,
 				BF471EA51DF5D64100C81538 /* Counting.hpp */,
+				BF471EA11DF5D64100C81538 /* Decompressor.cpp */,
+				BF471EA01DF5D64100C81538 /* Decompressor.hpp */,
+				BF471E9D1DF5D64100C81538 /* Huffman.cpp */,
+				BF471EA31DF5D64100C81538 /* Huffman.hpp */,
+				BF471E9B1DF5D64100C81538 /* main.cpp */,
 				BF471EA61DF5D64100C81538 /* Node.cpp */,
+				BF471EA41DF5D64100C81538 /* Node.hpp */,
+				BF471E991DF5D64100C81538 /* ShannonF.cpp */,
+				BF471E9C1DF5D64100C81538 /* ShannonF.h */,
 			);
 			path = Compress;
 			sourceTree = "<group>";
