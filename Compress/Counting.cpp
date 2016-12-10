@@ -9,18 +9,15 @@
 #include "Counting.hpp"
 #include <fstream>
 #include <iostream>
-
 struct Element
 {
     wchar_t c;
     int f;
 };
-
 bool compareByf(const Element &a, const Element &b)
 {
-    return a.f > b.f;
+    return a.f < b.f;
 }
-
 
 Counting::Counting(string filename)
 {
@@ -84,7 +81,6 @@ Counting::Counting(string filename)
     
     el.clear();
     
-    return;
     
 }
 Counting::~Counting()

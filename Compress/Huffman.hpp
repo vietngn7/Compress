@@ -38,7 +38,7 @@ private:
     
     vector<string> codes;
     
-    unsigned capacity;
+    size_t capacity;
 };
 
 #endif /* Huffman_hpp */

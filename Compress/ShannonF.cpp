@@ -47,7 +47,7 @@ ShannonF::ShannonF(const vector<wchar_t> symbols, const vector<int> frequencies)
     this->symbols = *new vector<wchar_t>();
     this->frequencies = *new vector<int>();
     
-    for(int i = 0; i < capacity; i++)
+    for(int i = (capacity - 1); i != 0; --i)
     {
         this->symbols.push_back(symbols[i]);
         this->frequencies.push_back(frequencies[i]);

@@ -18,7 +18,7 @@ Compressor::Compressor(string filename, string tofile, vector<wchar_t> symbols, 
     for(int i = 0; i < symbols.size(); ++ i)
         map.insert(pair<wchar_t, string>(symbols[i], codes[i]));
     
-    reverse(map.begin(), map.end());
+    //reverse(map.begin(), map.end());
 }
 
 vector<bool> Compressor::getBits(wchar_t c)
